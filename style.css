@@ -1,0 +1,166 @@
+h1 {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+}
+
+#taskForm {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+.input-container {
+  display: flex; /* Use Flexbox to align items horizontally */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+}
+
+#inputForm {
+  border-radius: 10px;
+  margin-right: 10px; /* Space between input and button */
+}
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px; /* Space between tasks */
+  margin: auto;
+  width: 50%;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9; /* Optional: background color */
+  padding: 10px; /* Optional: padding around the task item */
+  border-radius: 5px; /* Optional: rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  width: 100%; /* Ensure task item takes up full width */
+  box-sizing: border-box;
+}
+
+.checkDiv {
+  margin-right: 10px; /* Space between checkbox and text */
+}
+
+.textDiv {
+  flex-grow: 1; /* Allow text to take up remaining space */
+  margin-right: 10px; /* Space between text and edit button */
+  overflow: hidden; /* Hide overflowing text */
+}
+
+.textDiv p {
+  margin: 0; /* Remove default margin on paragraph */
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word; /* Break long words */
+  hyphens: auto; /* Optional: Add hyphens if words are broken */
+}
+
+.edt {
+  margin-left: auto; /* Push the button to the right */
+  border-radius: 10px; /* Optional: rounded corners for the button */
+  padding: 5px 10px; /* Optional: padding inside the button */
+}
+
+.button,
+.tick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.button {
+  width: 75px;
+  height: 50px;
+  background: #1abc9c;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.67, 0.17, 0.4, 0.83);
+  cursor: pointer;
+}
+
+.button svg {
+  transform: rotate(180deg);
+  transition: all 1.5s;
+}
+
+.button__circle {
+  width: 50px;
+  height: 50px;
+  background: rgb(4, 175, 81);
+  border-radius: 50%;
+  transform: rotate(-180deg);
+}
+
+.button__error {
+  width: 75px;
+  height: 50px;
+  background: red;
+}
+
+.button__error svg {
+  width: 75px;
+  height: 50px;
+  scale: 1;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.tick {
+  color: white;
+  font-size: 1em;
+  transition: all 1.5s;
+}
+
+#ajdup {
+  background: #efefef;
+  min-height: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+#ajdup input {
+  background: 0;
+  border: 0;
+  outline: none;
+  padding-left: 7px;
+  width: 80vw;
+  max-width: 400px;
+  font-size: 1.5em;
+  transition: padding 0.3s 0.2s ease;
+}
+#ajdup input:focus {
+  padding-bottom: 5px;
+}
+#ajdup input:focus + .line:after {
+  transform: scaleX(1);
+}
+#ajdup .field {
+  position: relative;
+}
+#ajdup .field .line {
+  width: 96%;
+  margin-left: 2.3%;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  background: #bdc3c7;
+}
+#ajdup .field .line:after {
+  content: " ";
+  position: relative;
+  float: right;
+  width: 100%;
+  height: 3px;
+  transform: scalex(0);
+  transition: transform 0.3s ease;
+  background: #1abc9c;
+}
